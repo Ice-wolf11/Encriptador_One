@@ -1,5 +1,8 @@
 body{
     font-family: 'Roboto', sans-serif;
+    width: 1440px;
+    height: 1024px;
+    background: #F3F5FC
 }
 
 .Logo img{
@@ -10,7 +13,206 @@ body{
     gap: 40px;
     position: absolute;
     width: 120px;
-    height: 80px;
+    height: 90px;
     left: 40px;
     top: 40px;
 }
+
+/*form{
+    width: 940px;
+    
+}*/
+
+.input_text{
+    position: absolute;
+    width: 680px;
+    height: 48px;
+    left: 240px;
+    top: 168px;
+    display: flex;
+}
+
+.input_text textarea{
+    background: none;
+    resize: none;
+    width: 680px;
+    height: 400px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    color: #0A3871;
+    border: none;
+}
+.input_text textarea:focus{
+    outline: none;
+}/*con esto no te sale el borde del text area*/
+
+form img{
+    
+    width: 16px;
+    height: 16px;
+    top: 851px;
+    left: 246px;
+    
+}
+.alert{
+    position: absolute;
+    width: 229px;
+    height: 18px;
+    top: 851px;
+    left: 265px;
+    gap: 8px;
+    
+}
+
+
+.alert p{
+    font-size: 12px;
+    line-height: 18px;
+    line-height: 150%;
+    text-align: left;
+    vertical-align: top;
+    opacity: 80%;
+    color: #495057;
+
+}
+
+.button{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+    position: absolute;
+    width: 680px;
+    height: 67px;
+    left: 240px;
+    top: 885px;
+    font-size: 16px;
+}
+
+.enc{
+    color: #FFFFFF;
+    background: #0A3871;
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    border: none;
+    padding: 24px;
+    gap: 8px;
+}
+.desen{
+    color: #0A3871;
+    background: #D8DFE8;
+    width: 328px;
+    height: 67px;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    padding: 24px;
+    gap: 8px;
+    box-sizing: border-box;
+
+}
+
+::placeholder{
+    color:#0A3871;
+}
+
+.rectangulo{
+    text-align: center;
+    background: #FFFFFF;
+    border-radius: 32px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    position:absolute;
+    width: 400px;
+    height: 944px;
+    left: 1000px;
+    top: 40px;
+}
+
+section textarea{
+    background: none;
+    resize: none;
+    position:absolute;
+    width: 336px;
+    height: 781px;
+    left: 1032px;
+    top: 72px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    color: #495057;
+    border: none;
+}
+
+section textarea:focus{
+    outline: none;
+}
+
+.copy{
+    /*box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+    position: absolute;
+    width: 336px;
+    height: 67px;
+    left: 1032px;
+    top: 885px;
+    border: 1px solid #0A3871;
+    border-radius: 24px;*/
+    
+    flex-direction: row;
+    align-items: flex-start;
+    color: #0A3871;
+    background: none;
+    width: 328px;
+    height: 67px;
+    left: 1032px;
+    top: 885px;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    padding: 24px;
+    gap: 8px;
+    position: absolute;
+    box-sizing: border-box;
+    display: none;
+}
+
+img{ 
+    position: absolute;
+    width: 336px;
+    height: 304px;
+    left: 1032px;
+    top: 283px; 
+ 
+}
+.parrafos{
+    position: absolute;
+    width: 336px;
+    top: 619px;
+    left: 1032px;
+    gap: 16px;
+    align-items: center;
+}
+.parrafos .p1{
+    font-size: 24px;
+    line-height: 29px;
+    line-height: 120%;
+    text-align: center;
+    vertical-align: top;
+    color: #343A40;
+}
+
+.parrafos .p2{
+    color: #495057;
+    font-size: 16px;
+    line-height: 24px;
+    line-height: 150%;
+    text-align: center;
+    vertical-align: top;
+}
+

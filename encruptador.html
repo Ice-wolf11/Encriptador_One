@@ -9,11 +9,48 @@
             <!--agregando fuente-->
             <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+            <script src="Logica.js"></script>
         </head>
         <body>
+            <!--configurando logo-->
             <header class="Logo">
-                <h1><img src="pictures/lobo.png"></h1>
+                <img src="pictures/lobo.png" alt="logo">
             </header>
+
+            <main>
+                <form>
+                    <div class="input_text">
+                        <textarea id="text_in_1" placeholder="Ingrese el texto aqui" required></textarea>
+                    </div>
+                    <img src="pictures/bi_exclamation-circle-fill.png" alt="">
+                    <div class="alert">
+                        <p>Solo letras minúsculas y sin acentos</p>
+                    </div>
+                    <div class="button">
+                        <input type="button" id="encriptar" value="Encriptar" class="enc" onclick="ocultar() ">
+                        <input type="button" id="desencriptar" value="Desencriptar" class="desen" onclick="ocultar() ""> 
+                    </div>
+
+                </form>
+
+                <section>
+                    <div class="rectangulo"></div>
+                    <textarea id="text_out" readonly></textarea>
+                    <input type="button" id="copiar" value="copiar" class="copy">
+                    <div id="parrafos">
+                        <img src="pictures/pikachu.png" alt="imagen">
+                        <div class="parrafos">
+                            <p class="p1">Ningún mensaje fue encontrado</p>
+                            <p class="p2">Ingresa el texto que desees encriptar o desencriptar</p>
+                        </div>
+                    </div>
+                    
+                </section>
+            </main>
+
+            
+
+
         </body>
 
     </html>
