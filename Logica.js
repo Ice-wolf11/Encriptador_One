@@ -18,19 +18,45 @@
   }
 
   //funcion para imprimir el texto obtenido del input en el output
-  function imprimir(){
-    var output = document.getElementById("text_out").textContent = obtener();
+  function imprimir(cadena){
+    var output = document.getElementById("text_out").textContent = cadena;
   }
 
   function encubrir() {
     ocultar_mostrar();
-    imprimir();
-    
-    
+    var cadena = obtener();
+    for (var x =0;x<5;x++){
+      if(x==0){
+        cadena = cadena.replaceAll("e","enter")
+      }else if(x==1){
+        cadena = cadena.replaceAll("i","imes");
+      }else if(x==2){
+        cadena = cadena.replaceAll("a","ai");
+      }else if(x==3){
+        cadena = cadena.replaceAll("o","ober");
+      }else if(x==4){
+        cadena = cadena.replaceAll("u","ufat");
+      } 
+    }
+    imprimir(cadena);
   
   }
 
   function desifrar() {
     ocultar_mostrar();
-    imprimir();
+    var cadena = obtener();
+    for (var x =0;x<5;x++){
+      if(x==0){
+        cadena = cadena.replaceAll("enter","e")
+      }else if(x==1){
+        cadena = cadena.replaceAll("imes","i");
+      }else if(x==2){
+        cadena = cadena.replaceAll("ai","a");
+      }else if(x==3){
+        cadena = cadena.replaceAll("ober","o");
+      }else if(x==4){
+        cadena = cadena.replaceAll("ufat","u");
+      } 
+    }
+    imprimir(cadena);
   }
