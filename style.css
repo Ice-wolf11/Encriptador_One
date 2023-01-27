@@ -148,6 +148,11 @@ section textarea{
 
 section textarea:focus{
     outline: none;
+    
+}
+/*pseudo elemento para ocultar la seleccion*/
+section textarea::selection{
+    background: transparent;
 }
 
 .copy{
