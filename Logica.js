@@ -25,19 +25,11 @@
   function encubrir() {
     ocultar_mostrar();
     var cadena = obtener();
-    for (var x =0;x<5;x++){
-      if(x==0){
-        cadena = cadena.replaceAll("e","enter")
-      }else if(x==1){
-        cadena = cadena.replaceAll("i","imes");
-      }else if(x==2){
-        cadena = cadena.replaceAll("a","ai");
-      }else if(x==3){
-        cadena = cadena.replaceAll("o","ober");
-      }else if(x==4){
-        cadena = cadena.replaceAll("u","ufat");
-      } 
-    }
+    cadena = cadena.replaceAll("e","enter");
+    cadena = cadena.replaceAll("i","imes");
+    cadena = cadena.replaceAll("a","ai");
+    cadena = cadena.replaceAll("o","ober");
+    cadena = cadena.replaceAll("u","ufat");
     imprimir(cadena);
   
   }
@@ -45,18 +37,10 @@
   function desifrar() {
     ocultar_mostrar();
     var cadena = obtener();
-    for (var x =0;x<5;x++){
-      if(x==0){
-        cadena = cadena.replaceAll("enter","e")
-      }else if(x==1){
-        cadena = cadena.replaceAll("imes","i");
-      }else if(x==2){
-        cadena = cadena.replaceAll("ai","a");
-      }else if(x==3){
-        cadena = cadena.replaceAll("ober","o");
-      }else if(x==4){
-        cadena = cadena.replaceAll("ufat","u");
-      } 
-    }
+    cadena = cadena.replaceAll("enter","e");
+    cadena = cadena.replaceAll("imes","i");
+    cadena = cadena.replaceAll("ai","a");
+    cadena = cadena.replaceAll("ober","o");
+    cadena = cadena.replaceAll("ufat","u");
     imprimir(cadena);
   }
