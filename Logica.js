@@ -14,6 +14,7 @@
   //funcion para obtener el texto del input
   function obtener(){
     var input = document.getElementById("text_in_1").value;
+    input = input.toLowerCase();
     return input;
   }
 
@@ -23,7 +24,7 @@
   }
 
   //funcion para detectar mayusculas
-  function Detectarmayus(cadena){
+  /*function Detectarmayus(cadena){
     var respuesta = false;
     const mayus = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","Ñ","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
     for (var x =0;x<cadena.length;x++){
@@ -34,7 +35,7 @@
       }
     }
     return respuesta;
-  }
+  }*/
   
   //funcion para detectar acentos
   function Detectaracento(cadena){
@@ -57,7 +58,7 @@
   function encubrir() {
     var cadena = obtener();
     //Detectaracento(cadena);
-    if ( Detectaracento(cadena)||Detectarmayus(cadena)){
+    if ( Detectaracento(cadena)){
       alert("Solo minusculas y sin acentos")
     }else{
       ocultar_mostrar();
@@ -73,7 +74,7 @@
   function desifrar() {
     var cadena = obtener();
     //Detectaracento(cadena);
-    if ( Detectaracento(cadena)||Detectarmayus(cadena)){
+    if ( Detectaracento(cadena)){
       alert("Solo minusculas y sin acentos")
     }else{
       ocultar_mostrar();
