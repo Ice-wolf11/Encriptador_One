@@ -59,7 +59,7 @@
     var cadena = obtener();
     //Detectaracento(cadena);
     if ( Detectaracento(cadena)){
-      alert("Solo minusculas y sin acentos")
+      alert("Solo minusculas")
     }else{
       ocultar_mostrar();
       cadena = cadena.replaceAll("e","enter");
@@ -75,7 +75,7 @@
     var cadena = obtener();
     //Detectaracento(cadena);
     if ( Detectaracento(cadena)){
-      alert("Solo minusculas y sin acentos")
+      alert("Solo minusculas")
     }else{
       ocultar_mostrar();
       cadena = cadena.replaceAll("enter","e");
