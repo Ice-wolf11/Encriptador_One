@@ -24,15 +24,16 @@
 
   //funcion para detectar mayusculas
   function Detectarmayus(cadena){
-    var cadena=obtener();
+    var respuesta = false;
+    const mayus = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","Ñ","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
     for (var x =0;x<cadena.length;x++){
-      var letra = cadena[x];
-        if (letra===letra.toUpperCase()){
-          return true;
-        }else{
-          return false;
+      for (var y = 0;y<mayus.length;y++){
+        if (cadena[x]== mayus[y]){
+          respuesta = true;
         }
+      }
     }
+    return respuesta;
   }
   
   //funcion para detectar acentos
