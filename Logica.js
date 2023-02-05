@@ -9,7 +9,7 @@
   
   function reaparecer(){
         //con esto borramos el contenido del output
-        document.getElementById("text_in_1").textContent = "";
+    document.getElementById("text_in_1").value = "";
     document.getElementById("text_out").textContent = "";
     document.getElementById("parrafos").style.display = "initial";
     document.getElementById("copiar").style.display = "none";
