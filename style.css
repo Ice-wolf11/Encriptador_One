@@ -1,7 +1,7 @@
 body{
     font-family: 'Roboto', sans-serif;
     background: url("pictures/noche.jpg");
-    background-size: contain;/*con esto se adapta la imagen al contenedor*/
+    background-size: cover;/*con esto se adapta la imagen al contenedor*/
     display: flex;
     flex-direction: column;
     min-height: 100vh;/*con esto el body ocupa el 100% de la pantalla en todos los casos*/
