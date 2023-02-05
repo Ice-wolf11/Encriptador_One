@@ -1,223 +1,206 @@
 body{
     font-family: 'Roboto', sans-serif;
-    width: 1440px;
-    height: 1024px;
-    background: #F3F5FC
-}
-
-.Logo img{
+    background: url("pictures/noche.jpg");
+    background-size: contain;/*con esto se adapta la imagen al contenedor*/
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 40px;
-    position: absolute;
-    width: 120px;
-    height: 90px;
-    left: 40px;
-    top: 40px;
+    min-height: 100vh;/*con esto el body ocupa el 100% de la pantalla en todos los casos*/
+
+}
+/*Con esto se configura el logo del header*/
+header{
+    padding: 10px 0px 0px 10px;
 }
 
-/*form{
-    width: 940px;
-    
-}*/
-
-.input_text{
-    position: absolute;
-    width: 680px;
-    height: 48px;
-    left: 240px;
-    top: 168px;
+.logo img{
+    margin: 10px 0px 0px 20px;
+    width: 80px;
+    display: inline-block;
+}
+main{
+    /*text-align: center;*/
     display: flex;
+    height: 75%;
+    margin: 0 0 10px 0;
+    
 }
 
-.input_text textarea{
-    background: none;
+/*configurando el cuerpo de la aplicación*/
+/*esto es del input*/
+.input_t{
+    /*background:greenyellow;*/
+    padding: 10px 80px;
+    width: 700px;
+    height: auto;
+    margin: 0px 10px 0px 70px;
+}
+.input_t textarea{
+    width: 670px;
+    height: 450px;
+    margin: 0 0 0 10px;
+    background:none;
     resize: none;
-    width: 680px;
-    height: 400px;
+    border: none;
     font-style: normal;
-    font-weight: 400;
     font-size: 32px;
     line-height: 150%;
-    color: #0A3871;
-    border: none;
+    color: #ffffff;
+    
 }
-.input_text textarea:focus{
+.input_t textarea:focus{
     outline: none;
+    border: none;
 }/*con esto no te sale el borde del text area*/
 
-form img{
-    
-    width: 16px;
-    height: 16px;
-    top: 851px;
-    left: 246px;
-    
-}
-.alert{
-    position: absolute;
-    width: 229px;
-    height: 18px;
-    top: 851px;
-    left: 265px;
-    gap: 8px;
-    
-}
-
-
-.alert p{
+.alerta p{
     font-size: 12px;
     line-height: 18px;
     line-height: 150%;
     text-align: left;
     vertical-align: top;
     opacity: 80%;
-    color: #495057;
+    color: #ffffff;
 
 }
 
-.button{
+.alerta{
+    display: inline-flex;
+    margin: 10px 0 ;
+    color: #ffffff;
+}
+
+.alerta img{
+    width: 16px;
+    margin: 0px 8px;
+}
+
+.contenedor_botones{
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 24px;
-    position: absolute;
-    width: 680px;
-    height: 67px;
-    left: 240px;
-    top: 885px;
+    width: 670px;;
+    padding: 0 10px;
+    gap: 15%;
+}
+
+.contenedor_botones input{
+    color: #f0e7e7;
+    width: 300px;
+    height: 47px;
     font-size: 16px;
-}
-
-.enc{
-    color: #FFFFFF;
-    background: #0A3871;
-    width: 328px;
-    height: 67px;
     border-radius: 24px;
-    border: none;
-    padding: 24px;
-    gap: 8px;
+    
 }
-.desen{
-    color: #0A3871;
-    background: #D8DFE8;
-    width: 328px;
-    height: 67px;
-    border: 1px solid #0A3871;
-    border-radius: 24px;
-    padding: 24px;
-    gap: 8px;
-    box-sizing: border-box;
-
+.contenedor_botones #encriptar{
+    background:#1e46f7b5;
 }
 
-::placeholder{
-    color:#0A3871;
+.contenedor_botones #desencriptar{
+    background:#37aff4b5;
 }
 
-.rectangulo{
+
+/*esta parte pertenece al output*/
+.output_t{
+    position:relative;
+    background: #c8d5e148;
+    flex-direction: column;
     text-align: center;
-    background: #FFFFFF;
+    width: 375px;
+    min-width: 50vh;
+    margin: 0px 25px 15px 70px;
+    padding: 0 2px;
     border-radius: 32px;
-    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-    position:absolute;
-    width: 400px;
-    height: 944px;
-    left: 1000px;
-    top: 40px;
-}
-
-section textarea{
-    background: none;
-    resize: none;
-    position:absolute;
-    width: 336px;
-    height: 781px;
-    left: 1032px;
-    top: 72px;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 150%;
-    color: #495057;
-    border: none;
-}
-
-section textarea:focus{
-    outline: none;
     
 }
-/*pseudo elemento para ocultar la seleccion*/
-section textarea::selection{
-    background: transparent;
+.output_text{
+    width: auto;
+    height: auto;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 50px;
+    position: absolute;
+    margin: 25px 10px;
+    padding: 10px;
+    /*background: red;*/
 }
 
-.copy{
-    /*box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 24px;
-    gap: 8px;
-    position: absolute;
-    width: 336px;
-    height: 67px;
-    left: 1032px;
-    top: 885px;
-    border: 1px solid #0A3871;
-    border-radius: 24px;*/
-    
-    flex-direction: row;
-    align-items: flex-start;
-    color: #0A3871;
-    background: none;
-    width: 328px;
-    height: 67px;
-    left: 1032px;
-    top: 885px;
-    border: 1px solid #0A3871;
-    border-radius: 24px;
-    padding: 24px;
-    gap: 8px;
-    position: absolute;
-    box-sizing: border-box;
-    display: none;
-}
-
-img{ 
-    position: absolute;
-    width: 336px;
-    height: 304px;
-    left: 1032px;
-    top: 283px; 
- 
-}
 .parrafos{
-    position: absolute;
-    width: 336px;
-    top: 619px;
-    left: 1032px;
-    gap: 16px;
-    align-items: center;
+    text-align: center;
+    padding: 0 20px;
 }
-.parrafos .p1{
+.output_text img{
+    width: 300px;
+}
+.output_text h1{
     font-size: 24px;
     line-height: 29px;
     line-height: 120%;
-    text-align: center;
-    vertical-align: top;
-    color: #343A40;
+    color: #c1b7b7;
 }
-
-.parrafos .p2{
-    color: #495057;
+.output_text p{
     font-size: 16px;
     line-height: 24px;
     line-height: 150%;
-    text-align: center;
-    vertical-align: top;
+    color: #c8d5e1;
 }
 
+.output_text textarea{
+    color: #ffffff;
+    position: absolute;
+    top: 1px;
+    right: 8px;
+    left: 10px;
+    bottom: 1px;
+    height: auto;
+    width: auto;
+    background:none;
+    resize: none;
+    border: none;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+}
+
+.botones_2{
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    margin: 10px 47px;
+}
+
+.botones_2 input{
+    color: #f0e7e7;
+    background: #37aff4b5;
+    width: 280px;
+    height: 47px;
+    font-size: 16px;
+    border-radius: 24px;
+    display: none;
+    
+}
+
+.output_text textarea:focus{
+    outline: none;
+    border: none;
+}
+
+::placeholder{
+    color:#ffffff;
+}
+
+/*configurando el footer*/
+footer{
+    text-align: center;
+    color: #ffffff;
+    margin-top: auto;
+}
+
+.contacto{
+    padding: 15px;
+}
+
+.contacto img{
+    margin: 0 5px;
+    width:2%;
+    
+}
