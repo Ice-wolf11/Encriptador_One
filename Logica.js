@@ -1,15 +1,17 @@
-  function copiar(){
-    //con estp estamos obteniendo el texto del text area, sleccionando el contenido y pasando este al portapapeles
-    var output = document.getElementById("text_out");
-    output.select();
-    output=document.execCommand("copy");//para copiar texto al portapaples
-    reaparecer();
-
+  function resaltar(){
+    document.getElementById("alerta").style.textShadow = "0 0 5px red, 0 0 15px red, 0 0 30px red,0 0 50px red,0 0 100px red";
+    document.getElementById("alerta").style.opacity="200%";
+    document.getElementById("alerta2").style.boxShadow = "0 0 5px red, 0 0 15px red, 0 0 30px red,0 0 50px red";
+  }
+  function quitarresaltar(){
+    document.getElementById("alerta").style.textShadow = "none";
+    document.getElementById("alerta").style.opacity="80%";
+    document.getElementById("alerta2").style.boxShadow = "none";
   }
   
   function reaparecer(){
         //con esto borramos el contenido del output
-    document.getElementById("text_in_1").value = "";
+    document.getElementById("text_in_1").value = ""; //esto solo afecta al input
     document.getElementById("text_out").textContent = "";
     document.getElementById("parrafos").style.display = "initial";
     document.getElementById("copiar").style.display = "none";
@@ -18,6 +20,22 @@
   function ocultar_mostrar(){
     document.getElementById("parrafos").style.display = "none";//para ocultar el texto
     document.getElementById("copiar").style.display = "initial";//para mostrar el texto
+  }
+
+
+  
+
+  //funciones de logica
+  //valores constantes para encriptar y desencriptar
+  const cambio = ["enter","imes","ai","ober","ufat"];
+  const actual = ["e","i","a","o","u"];
+
+  function copiar(){
+    //con estp estamos obteniendo el texto del text area, sleccionando el contenido y pasando este al portapapeles
+    var output = document.getElementById("text_out");
+    output.select();
+    output=document.execCommand("copy");//para copiar texto al portapaples
+    reaparecer();
   }
 
   //funcion para obtener el texto del input
@@ -39,7 +57,6 @@
     for (var x =0;x<cadena.length;x++){
       for (var y = 0;y<mayus.length;y++){
         if (cadena[x]== mayus[y]){
-          console.log("hoal");
           respuesta = true;
         }
       }
@@ -79,11 +96,10 @@
     var cadena = obtener();
     //Detectaracento(cadena);
     if ( Detectaracento(cadena) || Detectarmayus(cadena)){
-      alert("Sin acentos ni Mayusculas")
+      resaltar(); 
     }else{
+      quitarresaltar();
       ocultar_mostrar();
-      const cambio = ["enter","imes","ai","ober","ufat"];
-      const actual = ["e","i","a","o","u"];
       for(var x = 0;x<cambio.length;x++){
         cadena = cadena.replaceAll(actual[x],cambio[x]); 
       }
@@ -96,11 +112,10 @@
     var cadena = obtener();
     //Detectaracento(cadena);
     if ( Detectaracento(cadena) || Detectarmayus(cadena)){
-      alert("Sin acentos ni Mayusculas")
+      resaltar();
     }else{
+      quitarresaltar()
       ocultar_mostrar();
-      const cambio = ["enter","imes","ai","ober","ufat"];
-      const actual = ["e","i","a","o","u"];
       for(var x = 0;x<cambio.length;x++){
         cadena = cadena.replaceAll(cambio[x],actual[x]); 
       }

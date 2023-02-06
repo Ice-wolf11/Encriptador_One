@@ -60,7 +60,7 @@ main{
     vertical-align: top;
     opacity: 80%;
     color: #ffffff;
-
+    margin: 0px 8px;
 }
 
 .alerta{
@@ -72,6 +72,7 @@ main{
 .alerta img{
     width: 16px;
     margin: 0px 8px;
+    border-radius: 10px;
 }
 
 .contenedor_botones{
