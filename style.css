@@ -20,19 +20,26 @@ header{
 main{
     /*text-align: center;*/
     display: flex;
-    height: 75%;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
     margin: 0 0 10px 0;
     
 }
-
+.ventana{
+    display: flex;
+    align-items: flex-start;
+    margin: 0 0px;
+}
 /*configurando el cuerpo de la aplicación*/
 /*esto es del input*/
 .input_t{
     /*background:greenyellow;*/
-    padding: 10px 80px;
+    padding: 10px 30px 10px 10px;
     width: 700px;
     height: auto;
-    margin: 0px 10px 0px 70px;
+    margin: 0px 10px 0px 10px;
+    display: inline-block;
 }
 .input_t textarea{
     width: 670px;
@@ -45,6 +52,7 @@ main{
     font-size: 32px;
     line-height: 150%;
     color: #ffffff;
+    border-radius: 15px;
     
 }
 .input_t textarea:focus{
@@ -52,7 +60,18 @@ main{
     border: none;
 }/*con esto no te sale el borde del text area*/
 
+::placeholder{
+    color:#ffffff;
+}
+
+.alerta{
+    display: block;
+    margin: 10px 0 ;
+    color: #ffffff;
+}
+
 .alerta p{
+    display: inline-flex;
     font-size: 12px;
     line-height: 18px;
     line-height: 150%;
@@ -60,18 +79,12 @@ main{
     vertical-align: top;
     opacity: 80%;
     color: #ffffff;
-    margin: 0px 8px;
-}
-
-.alerta{
-    display: inline-flex;
-    margin: 10px 0 ;
-    color: #ffffff;
+    margin: 0px 3px;
 }
 
 .alerta img{
     width: 16px;
-    margin: 0px 8px;
+    margin: 0px 3px;
     border-radius: 10px;
 }
 
@@ -92,46 +105,66 @@ main{
 }
 .contenedor_botones #encriptar{
     background:#1e46f7b5;
+    border:none;
+}
+
+#encriptar:hover{
+    border: solid;
+    border-color: white;
+    color:  white;
+    box-shadow: 0 0 5px #1e46f7b5, 0 0 15px #1e46f7b5, 0 0 30px #1e46f7b5;
 }
 
 .contenedor_botones #desencriptar{
     background:#37aff4b5;
+    border: none;
 }
 
+#desencriptar:hover{
+    border: solid;
+    border-color: white;
+    color:  white;
+    box-shadow: 0 0 5px #37aff4b5, 0 0 15px #37aff4b5, 0 0 30px #37aff4b5;
+}
 
 /*esta parte pertenece al output*/
 .output_t{
-    position:relative;
+    display: inline-block;
     background: #c8d5e148;
     flex-direction: column;
     text-align: center;
-    width: 375px;
-    min-width: 50vh;
-    margin: 0px 25px 15px 70px;
-    padding: 0 2px;
+    align-items: center;
+    width: 350px;
+    margin: 0px 25px 15px 20px;
+    padding: 0 10px;
     border-radius: 32px;
     
 }
 .output_text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: auto;
     height: auto;
-    top: 2px;
-    left: 2px;
-    right: 2px;
-    bottom: 50px;
-    position: absolute;
-    margin: 25px 10px;
+    margin: 25px 0px;
     padding: 10px;
     /*background: red;*/
 }
 
-.parrafos{
-    text-align: center;
-    padding: 0 20px;
-}
 .output_text img{
     width: 300px;
 }
+
+.parrafos{
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px 0px;
+    
+}
+
 .output_text h1{
     font-size: 24px;
     line-height: 29px;
@@ -147,26 +180,22 @@ main{
 
 .output_text textarea{
     color: #ffffff;
-    position: absolute;
-    top: 1px;
-    right: 8px;
-    left: 10px;
-    bottom: 1px;
-    height: auto;
-    width: auto;
+    height: 400px;
+    width: 350px;
     background:none;
     resize: none;
     border: none;
     font-weight: 400;
     font-size: 24px;
     line-height: 150%;
+    display: none;
 }
 
 .botones_2{
-    position: absolute;
     bottom: 20px;
     text-align: center;
-    margin: 10px 47px;
+    margin: 10px 0px;
+    
 }
 
 .botones_2 input{
@@ -176,8 +205,14 @@ main{
     height: 47px;
     font-size: 16px;
     border-radius: 24px;
-    display: none;
-    
+    border: none;
+    display: none;   
+}
+.botones_2 input:hover{
+    border: solid;
+    border-color: white;
+    color:  white;
+    box-shadow: 0 0 5px #37aff4b5, 0 0 15px #37aff4b5, 0 0 30px #37aff4b5;
 }
 
 .output_text textarea:focus{
@@ -185,9 +220,7 @@ main{
     border: none;
 }
 
-::placeholder{
-    color:#ffffff;
-}
+
 
 /*configurando el footer*/
 footer{
@@ -197,11 +230,235 @@ footer{
 }
 
 .contacto{
-    padding: 15px;
+    padding: 10px;
 }
 
 .contacto img{
     margin: 0 5px;
     width:2%;
     
+}
+@media screen and (max-width:1100px){
+    .ventana{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input_t{
+        width: fit-content;
+        
+    }
+
+    .output_t{
+        width: 70%;
+        align-items: center;
+        margin: 50px;   
+    }
+
+    .output_text img{
+        display: none;
+    }
+}
+
+/*configurando el responsive*/
+@media screen and (max-width:900px){
+    .ventana{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input_t{
+        width: fit-content;
+        
+    }
+
+    .output_t{
+        width: 70%;
+        align-items: center;
+        margin: 50px;   
+    }
+
+    .output_text img{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:800px){
+    .ventana{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input_t{
+        width: fit-content;
+        
+    }
+
+    .output_t{
+        width: 70%;
+        align-items: center;
+        margin: 50px;   
+    }
+
+    .output_text img{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:750px){
+    main{
+        display: flex;
+        align-items: center;
+    }
+    .ventana{
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input_t{
+        width: 80%;
+        height: auto;
+        margin: 0 0px;
+        padding: 0px 0px;
+    }
+    .input_t textarea{
+        height: 30vh;
+        width: fit-content;
+        margin: 0;
+    }
+
+    .contenedor_botones{
+        align-items: center;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+
+    .contenedor_botones input{
+        margin: 10px 0;
+
+    }
+
+    .output_t{
+        width: 80%;
+        height: fit-content;
+        margin: 0px;
+        padding: 0px 10px;
+    }
+
+    .output_text{
+        margin: 0;
+    }
+
+    .output_text textarea{
+        height: 30vh;
+        width: fit-content;
+        margin: 0;
+    }
+
+    .output_text img{
+        display: none;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        color: #ffffff;
+        margin: 10px 10px;
+    }
+    
+    .contacto{
+        padding: 10px;
+    }
+    
+    .contacto img{
+        margin: 0 5px;
+        width:7%;
+        
+    }
+
+}
+
+
+@media screen and (max-width:500px){
+    main{
+        display: flex;
+        align-items: center;
+    }
+    .ventana{
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input_t{
+        width: 80%;
+        height: auto;
+        margin: 0 0px;
+        padding: 0px 0px;
+    }
+    .input_t textarea{
+        height: 30vh;
+        width: fit-content;
+        margin: 0;
+    }
+
+    .contenedor_botones{
+        align-items: center;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+
+    .contenedor_botones input{
+        margin: 10px 0;
+
+    }
+
+    .output_t{
+        width: 80%;
+        height: fit-content;
+        margin: 0px;
+        padding: 0px 10px;
+    }
+
+    .output_text{
+        margin: 0;
+    }
+
+    .output_text img{
+        display: none;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        color: #ffffff;
+        margin: 10px 10px;
+    }
+    
+    .contacto{
+        padding: 10px;
+    }
+    
+    .contacto img{
+        margin: 0 5px;
+        width:7%;
+        
+    }
+
 }

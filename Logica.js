@@ -1,12 +1,17 @@
   function resaltar(){
-    document.getElementById("alerta").style.textShadow = "0 0 5px red, 0 0 15px red, 0 0 30px red,0 0 50px red,0 0 100px red";
+    document.getElementById("alerta").style.textShadow = "0 0 5px red, 0 0 15px red, 0 0 30px red,0 0 50px red";
     document.getElementById("alerta").style.opacity="200%";
     document.getElementById("alerta2").style.boxShadow = "0 0 5px red, 0 0 15px red, 0 0 30px red,0 0 50px red";
+    document.getElementById("text_in_1").style.boxShadow="0 0 5px red, 0 0 15px red, 0 0 20px red";
+    document.getElementById("text_in_1").style.borderColor="white";
+    document.getElementById("text_in_1").style.border="solid 1.6px";
   }
   function quitarresaltar(){
     document.getElementById("alerta").style.textShadow = "none";
     document.getElementById("alerta").style.opacity="80%";
     document.getElementById("alerta2").style.boxShadow = "none";
+    document.getElementById("text_in_1").style.boxShadow="none";
+    document.getElementById("text_in_1").style.border="none";
   }
   
   function reaparecer(){
@@ -15,20 +20,28 @@
     document.getElementById("text_out").textContent = "";
     document.getElementById("parrafos").style.display = "initial";
     document.getElementById("copiar").style.display = "none";
+    document.getElementById("text_out").style.display = "none";
   }
 
   function ocultar_mostrar(){
     document.getElementById("parrafos").style.display = "none";//para ocultar el texto
     document.getElementById("copiar").style.display = "initial";//para mostrar el texto
+    document.getElementById("text_out").style.display = "initial";//para mostrar el texto
   }
 
-
-  
 
   //funciones de logica
   //valores constantes para encriptar y desencriptar
   const cambio = ["enter","imes","ai","ober","ufat"];
   const actual = ["e","i","a","o","u"];
+
+  function Detectarcontenido(){
+    if (obtener() == ""){
+      return true;
+    }else{
+      return false;
+    }
+  }
 
   function copiar(){
     //con estp estamos obteniendo el texto del text area, sleccionando el contenido y pasando este al portapapeles
@@ -95,7 +108,7 @@
   function encubrir() {
     var cadena = obtener();
     //Detectaracento(cadena);
-    if ( Detectaracento(cadena) || Detectarmayus(cadena)){
+    if ( Detectaracento(cadena) || Detectarmayus(cadena) || Detectarcontenido()){
       resaltar(); 
     }else{
       quitarresaltar();
@@ -111,7 +124,7 @@
   function desifrar() {
     var cadena = obtener();
     //Detectaracento(cadena);
-    if ( Detectaracento(cadena) || Detectarmayus(cadena)){
+    if ( Detectaracento(cadena) || Detectarmayus(cadena)|| Detectarcontenido()){
       resaltar();
     }else{
       quitarresaltar()

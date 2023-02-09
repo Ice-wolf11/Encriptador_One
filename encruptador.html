@@ -2,6 +2,7 @@
     <html len="esp">
         <head> 
             <meta charset="UTF-8"><!--PARA EL DICCIONARIO--> 
+            <meta name="viewport" content="width=device-width">
             <link rel="stylesheet" href="reset.css"><!--PARA REINICIAR EL CSS-->
             <link rel="stylesheet" href = "style.css"><!--ESTILOD DE LA PAGINA-->
             <title>Encriptador de texto</title><!--titulo de la pagina-->
@@ -9,6 +10,7 @@
             <!--agregando fuente-->
             <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+            <!--llamando al archivo js para configurar la logica-->
             <script src="Logica.js"></script>
         </head>
         <body>
@@ -19,40 +21,42 @@
                 </div>
             </header>
             <main>
-                <!--area de input-->
-                <section class="input_t">
+                <div class="ventana">
+                    <!--area de input-->
+                    <section class="input_t">
+                        
+                        <textarea id="text_in_1" placeholder="Ingrese el texto aquí" required></textarea>
+                        
+                        <div class ="alerta" >
+                            <img src="pictures/alerta.png" alt="" id="alerta2">
+                            <p id = "alerta">Solo letras minúsculas y sin acentos</p>
+                        </div>
+                        
+                        <div class="contenedor_botones">
+                            <input type="button" id="encriptar" value="Encriptar" class="enc" onclick="encubrir() ">
+                            <input type="button" id="desencriptar" value="Desencriptar" class="desen" onclick="desifrar() "> 
+                        </div>
+        
+                    </section>
                     
-                    <textarea id="text_in_1" placeholder="Ingrese el texto aquí" required></textarea>
-                    
-                    <div class ="alerta" >
-                        <img src="pictures/alerta.png" alt="" id="alerta2">
-                        <p id = "alerta">Solo letras minúsculas y sin acentos</p>
-                    </div>
-                    
-                    <div class="contenedor_botones">
-                        <input type="button" id="encriptar" value="Encriptar" class="enc" onclick="encubrir() ">
-                        <input type="button" id="desencriptar" value="Desencriptar" class="desen" onclick="desifrar() "> 
-                    </div>
-    
-                </section>
-                
-                <section class="output_t">
-                    
-                    <div class="output_text">
-                        <textarea id="text_out" readonly></textarea>
-                        <div id="parrafos">
-                            <img src="pictures/searching-documents.png" alt="imagen">
-                            <div class="parrafos">
-                                <h1>Ningún mensaje fue encontrado</h1>
-                                <p>Ingresa el texto que desees encriptar o desencriptar</p>
+                    <section class="output_t">
+                        
+                        <div class="output_text">
+                            <textarea id="text_out" readonly></textarea>
+                            <div id="parrafos">
+                                <img src="pictures/searching-documents.png" alt="imagen">
+                                <div class="parrafos">
+                                    <h1>Ningún mensaje fue encontrado</h1>
+                                    <p>Ingresa el texto que desees encriptar o desencriptar</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="botones_2">
-                        <input type="button" id="copiar" value="copiar" class="copy" onclick="copiar()">
-                    </div>
-                    
-                </section>
+                        <div class="botones_2">
+                            <input type="button" id="copiar" value="copiar" class="copy" onclick="copiar()">
+                        </div>
+                        
+                    </section>
+                </div>
             </main>
             
             <footer>
