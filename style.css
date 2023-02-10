@@ -27,6 +27,7 @@ main{
     
 }
 .ventana{
+    width: 100%;
     display: flex;
     align-items: flex-start;
     margin: 0 0px;
@@ -316,14 +317,13 @@ footer{
         align-items: center;
     }
     .ventana{
-        width: fit-content;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
     .input_t{
-        width: 80%;
+        width: fit-content;
         height: auto;
         margin: 0 0px;
         padding: 0px 0px;
@@ -343,6 +343,7 @@ footer{
     }
 
     .contenedor_botones input{
+        width: 100%;
         margin: 10px 0;
 
     }
@@ -396,7 +397,7 @@ footer{
         align-items: center;
     }
     .ventana{
-        width: fit-content;
+
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -410,7 +411,7 @@ footer{
     }
     .input_t textarea{
         height: 30vh;
-        width: fit-content;
+        width: 100%;
         margin: 0;
     }
 
