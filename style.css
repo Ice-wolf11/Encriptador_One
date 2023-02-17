@@ -1,7 +1,11 @@
 body{
+    /*fondo de la pagina*/
+    background: #360033; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #360033, #0b8793); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #360033, #0b8793);
+
     font-family: 'Roboto', sans-serif;
-    background: #0e093b;
-    background-size: cover;/*con esto se adapta la imagen al contenedor*/
+    /*background-size: cover; => con esto se adapta la imagen al contenedor*/
     display: flex;
     flex-direction: column;
     min-height: 100vh;/*con esto el body ocupa el 100% de la pantalla en todos los casos*/
